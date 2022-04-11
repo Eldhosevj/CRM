@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Outlet
+} from "react-router-dom";
+import NewQuationForm from "./modules/NewQuatation/NewQuationForm"
+import Login from './modules/Login/Component/Login';
+import NavBar from './sharedModules/NavigationBar/Navigation';
+import FileUpload from "./modules/fileUpload/fileUpload"
+import FullProjectRecordTable from "./modules/FullProjectRecordTable/component/FullProjectRecordTable"
+function App(){
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+return (<div>
+
+<BrowserRouter>
+
+<Routes>
+
+        <Route path="/NewQuation" element={
+<NewQuationForm />
+
+        } />
+        <Route path="/" element={<Login/>} />
+        <Route path="/FileUpload" element={<FileUpload/>} />
+        <Route path="/DashBord" element={<FullProjectRecordTable/>} />
+
+        </Routes>
+</BrowserRouter>
+ 
+
+  
+
+</div>)
+
 }
 
-export default App;
+export default App
+

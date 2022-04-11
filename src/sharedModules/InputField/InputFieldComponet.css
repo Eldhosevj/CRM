@@ -1,0 +1,13 @@
+input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+-webkit-appearance: none;
+background-color:#ebeced;
+width: 200px;
+appearance: none;
+
+}
+input:focus{
+    outline: none;
+}
